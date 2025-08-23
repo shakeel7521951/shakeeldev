@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")).render(
 
         {/* WhatsApp Floating Button */}
         <a
-          href="https://wa.me/+923284691106" // Replace with your WhatsApp number
+          href="https://wa.me/+923267100227" // Replace with your WhatsApp number
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-5 right-5 z-50 group"
