@@ -1,0 +1,48 @@
+/* App.css */
+body {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Background Styling */
+.solar-bg {
+  background: red;
+  position: relative;
+}
+
+/* Glowing Sun in the center */
+.sun {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 1) 0%, rgba(255, 165, 0, 0.8) 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Orbit Animation */
+@keyframes orbitAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Orbit Object Styling */
+.orbit-content {
+  transition: all 0.3s ease;
+}
+
+.orbit-content:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
