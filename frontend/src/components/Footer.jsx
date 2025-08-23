@@ -34,16 +34,16 @@ const socialIcons = [
 const contactItems = [
   {
     icon: <BsTelephoneFill className="text-white text-base" />,
-    text: "+44 7470 103120",
+    text: "+92 326 7100227",
   },
   {
     icon: <MdEmail className="text-white text-base" />,
-    text: "shakeel1375",
+    text: "shakeeldev.tech@gmail.com",
   },
 
   {
     icon: <MdLocationOn className="text-white text-base" />,
-    text: "Hassan Manzil  Goheer Town Bahawalpur (Global Delivery Center)",
+    text: "Bahawalpur Pakistan",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Footer() {
               <Link to="/">
                 <img
                   src="./newlog.png"
-                  alt="Codes Thinker Logo"
+                  alt="Shakeel Dev"
                   className="w-full h-full object-cover bg-center "
                 />
               </Link>
