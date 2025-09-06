@@ -2,54 +2,54 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
-  FaNetworkWired,
-  FaHandshake,
-  FaLock,
+  FaCode,
+  FaLaptopCode,
+  FaServer,
   FaRocket,
-  FaExchangeAlt,
-  FaLightbulb,
+  FaCloud,
+  FaShieldAlt,
 } from "react-icons/fa";
 
 // Feature data with AOS type and duration
 const features = [
   {
-    icon: <FaNetworkWired />,
-    label: "Blockchain Expertise",
+    icon: <FaCode />,
+    label: "MERN & Next.js Expertise",
     position: "lg:ms-[-200px]",
     aos: "fade-left",
     duration: 800,
   },
   {
-    icon: <FaHandshake />,
-    label: "Small Business Support",
+    icon: <FaLaptopCode />,
+    label: "Responsive UI/UX Design",
     position: "lg:ms-[-120px]",
     aos: "fade-left",
     duration: 1200,
   },
   {
-    icon: <FaLock />,
-    label: "Crypto Solutions",
+    icon: <FaServer />,
+    label: "Secure Backend Solutions",
     position: "lg:ms-[-60px]",
     aos: "fade-left",
     duration: 1600,
   },
   {
     icon: <FaRocket />,
-    label: "Startup Business",
+    label: "Scalable Web Applications",
     position: "lg:ms-[-60px]",
     aos: "fade-left",
     duration: 2000,
   },
   {
-    icon: <FaExchangeAlt />,
-    label: "B2B Integration",
+    icon: <FaCloud />,
+    label: "Cloud & Deployment",
     position: "lg:ms-[-120px]",
     aos: "fade-left",
     duration: 2400,
   },
   {
-    icon: <FaLightbulb />,
-    label: "Fintech Innovation",
+    icon: <FaShieldAlt />,
+    label: "Authentication & Security",
     position: "lg:ms-[-200px]",
     aos: "fade-left",
     duration: 2800,

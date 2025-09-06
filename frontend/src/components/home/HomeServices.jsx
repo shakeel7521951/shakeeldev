@@ -2,66 +2,72 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HomeServices = () => {
+ const HomeServices = () => {
   const services = [
     {
-      name: "Development",
+      name: "Full Stack Development",
       tags: [
-        "Custom Development",
-        "Web App Development",
-        "Mobile App Development",
-        "Blockchain Dev",
-        "Crypto Token Dev",
-        "Wordpress Dev",
+        "MERN Stack Applications",
+        "Next.js Development",
+        "REST & GraphQL APIs",
+        "Authentication & Security",
+        "Scalable Architectures",
+        "Cloud Deployment (AWS, Vercel, Render, Netlify)",
       ],
     },
     {
-      name: "Management",
+      name: "Frontend Engineering",
       tags: [
-        "Community Management",
-        "Social Media Management",
-        "Social Media Moderation",
+        "React.js / Next.js",
+        "Tailwind CSS / Bootstrap",
+        "Responsive Web Design",
+        "Performance Optimization",
+        "State Management (Redux / RTK)",
+        "Reusable UI Components",
       ],
     },
     {
-      name: "Marketing",
+      name: "Backend Engineering",
       tags: [
-        "SEO (On-Page)",
-        "SEO (Off-Page)",
-        "Influencer Marketing",
-        "Content Marketing",
-        "Lead Generation",
-        "Email Campaigns",
+        "Node.js & Express.js",
+        "MongoDB & Mongoose",
+        "Authentication (JWT, OAuth, Bcrypt)",
+        "Database Design",
+        "API Integration",
+        "Error Handling & Validation",
       ],
     },
     {
-      name: "Graphics & Visuals",
+      name: "Deployment & DevOps",
       tags: [
-        "Logo Design",
-        "Stationary Design",
-        "Social Media Design",
-        "UI/UX Design",
-        "Web Design",
+        "Vercel / Netlify / Render",
+        "AWS (EC2, S3, Lambda)",
+        "Docker Basics",
+        "CI/CD Setup",
+        "Nginx & PM2",
+        "Version Control (Git/GitHub)",
       ],
     },
     {
-      name: "Video Editing",
+      name: "SEO & Optimization",
       tags: [
-        "Motion Graphics",
-        "Youtube Video",
-        "Brand Video",
-        "Podcast Video",
-        "Documentary",
+        "SEO Friendly Development",
+        "On-Page Optimization",
+        "Server-Side Rendering (SSR)",
+        "Static Site Generation (SSG)",
+        "Website Performance Tuning",
+        "Core Web Vitals Improvement",
       ],
     },
     {
-      name: "Content Writing",
+      name: "UI/UX & Design",
       tags: [
-        "Web Content Writing",
-        "Product Description",
-        "White Paper Content",
-        "Blog Writing",
-        "Case Studies",
+        "User-Centered Design",
+        "Wireframing & Prototyping",
+        "UI/UX for Web Apps",
+        "Figma to Code",
+        "Modern Web Interfaces",
+        "Mobile-First Design",
       ],
     },
   ];
@@ -104,13 +110,13 @@ const HomeServices = () => {
       <div className="container flex flex-col md:flex-row gap-10 mx-auto rounded-3xl my-6 p-5">
         {/* Left Side - Service Menu */}
         <div
-          className="w-full md:w-1/3 flex flex-col gap-4"
+          className="w-full md:w-2/5 flex flex-col gap-4"
           data-aos="zoom-in-right"
         >
           {services.map((service, index) => (
             <h4
               key={index}
-              className={`text-center px-10 py-2 rounded-3xl border border-[#0000001d] shadow cursor-pointer font-semibold text-2xl
+              className={`text-center px-10 py-2 rounded-3xl border border-[#0000001d] shadow cursor-pointer font-semibold text-xl
     bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700
     ${
       service.name === selectedService.name
@@ -126,7 +132,7 @@ const HomeServices = () => {
 
         {/* Right Side - Image + Tags */}
         <div
-          className="w-full md:w-2/3 flex flex-col items-center justify-center"
+          className="w-full md:w-3/5 flex flex-col items-center justify-center"
           data-aos="zoom-in-left"
         >
           <img

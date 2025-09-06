@@ -16,10 +16,10 @@ export const allProjects = [
       "/project/lundary3.PNG",
       "/project/lundary4.PNG",
     ],
-    link: "",
+    link: "https://lundary.vercel.app",
     aos: "fade-right",
     duration: "1000",
-    category: "UI/UX",
+    category: "Website development",
   },
   {
     id: 1,
@@ -139,91 +139,5 @@ export const allProjects = [
     aos: "fade-right",
     duration: "1000",
     category: "Website development",
-  },
-  {
-    id: 8,
-    title: "Figma Design Ai Dashboard",
-    description:
-      "Sleek, data-driven interface for monitoring AI performance with interactive charts and real-time analytics.",
-    featured: "/project/figmaAi1.png",
-    thumbnails: [
-      "/project/figmaAi1.png",
-      "/project/figmaAi2.png",
-      "/project/figmaAi3.png",
-      "/project/figmaAi4.png",
-    ],
-    link: "https://www.figma.com/design/0yCACDwyDkyN0EqgEsdYiO/Dash-board-ai?node-id=0-1&p=f&t=sVuOG3OAs6LA5Z1l-0",
-    aos: "fade-right",
-    duration: "1000",
-    category: "UI/UX",
-  },
-  {
-    id: 9,
-    title: "Figma Design Transpohub $ Logistics Provide Word",
-    description:
-      "Modern and dynamic design showcasing Transpohub's logistics solutions with clear service highlights and visuals.",
-    featured: "/project/logistic1.PNG",
-    thumbnails: [
-      "/project/logistic1.PNG",
-      "/project/logistic2.PNG",
-      "/project/logistic3.PNG",
-      "/project/logistic4.PNG",
-    ],
-    link: "https://www.figma.com/design/Av2Ed3J1tlnSo8JA2D1PjR/Logistics?node-id=0-1&p=f&t=IKTHkquXNld8K9xj-0",
-    aos: "fade-right",
-    duration: "1000",
-    category: "UI/UX",
-  },
-  {
-    id: 10,
-    title: "Figma Design Deckohost Service base website",
-    description:
-      "Clean and professional layout highlighting Deckohost’s hosting services with intuitive navigation and visuals.",
-    featured: "/project/deckohost1.PNG",
-    thumbnails: [
-      "/project/deckohost1.PNG",
-      "/project/deckohost2.PNG",
-      "/project/deckohost3.PNG",
-      "/project/deckohost4.PNG",
-    ],
-    link: "https://www.figma.com/design/kq0atK4yTRCbNkm7KJlZiG/Dekohost?node-id=0-1&p=f&t=1LyabYSTl3Tx66L7-0",
-    aos: "fade-right",
-    duration: "1000",
-    category: "UI/UX",
-  },
-  {
-    id: 11,
-    title: "Figma design Best place to prepare for competitive Exams",
-    description:
-      "User-friendly, modern design showcasing top resources for competitive exam preparation and success.",
-    featured: "/project/ppsc1.PNG",
-    thumbnails: [
-      "/project/ppsc1.PNG",
-      "/project/ppsc2.PNG",
-      "/project/ppsc3.PNG",
-      "/project/ppsc4.PNG",
-    ],
-    link: "https://www.figma.com/design/kvDU7sk6epN4m7H2lXYYkU/SkillSphere?node-id=0-1&p=f&t=rrBbr1V8j5Ge3SPQ-0",
-    aos: "fade-right",
-    duration: "1000",
-    category: "UI/UX",
-  },
-  {
-    id: 12,
-    title: "Overtime Management",
-    description:
-      "User-friendly, modern design showcasing top resources for managing overtime.",
-    featured: "/project/overtime3.jpg",
-    thumbnails: [
-      "/project/overtime1.jpg",
-      "/project/overtime2.jpg",
-      "/project/overtime3.jpg",
-      "/project/overtime4.jpg",
-    ],
-    link: "",
-    aos: "fade-right",
-    duration: "1000",
-    category: "UI/UX",
-  },
-
+  }
 ];

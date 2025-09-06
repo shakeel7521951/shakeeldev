@@ -10,11 +10,11 @@ const HomeAbout = () => {
   const isAboutPage = location.pathname === "/about";
 
   const aboutFeatures = [
-    { text: "Industry Expert Experience", aos: "fade-right" },
-    { text: "Client-Centric Focus", aos: "fade-left" },
-    { text: "Partner rather than Vendor", aos: "fade-up-right" },
-    { text: "Solutions Geared to Improve Productivity", aos: "fade-up-left" },
-    { text: "Collaborative Approach Throughout the Process", aos: "fade-up-right" },
+    { text: "Proven Full Stack Expertise", aos: "fade-right" },
+    { text: "Client-First, Value-Driven Approach", aos: "fade-left" },
+    { text: "Collaboration Beyond Just Delivery", aos: "fade-up-right" },
+    { text: "Solutions That Enhance Productivity", aos: "fade-up-left" },
+    { text: "Transparent & Continuous Communication", aos: "fade-up-right" },
   ];
 
   useEffect(() => {
@@ -68,15 +68,17 @@ const HomeAbout = () => {
         }
       `}</style>
 
-      <div className="  bg-[#e0ecee]  pt-10 pb-10 px-5 text-black overflow-hidden">
+      <div className="bg-[#e0ecee] pt-10 pb-10 px-5 text-black overflow-hidden">
         <div className="container mx-auto flex flex-col md:flex-row gap-8">
-          
           {/* Image Section with Shine */}
-          <div className="w-full md:w-1/2 order-2 group" data-aos="fade-up-right">
+          <div
+            className="w-full md:w-1/2 order-2 group"
+            data-aos="fade-up-right"
+          >
             <div className="shine-wrapper rounded-md overflow-hidden">
               <img
                 src={about}
-                alt="About Code's Thinker"
+                alt="About Shakeel Dev"
                 loading="lazy"
                 className="md:min-h-[450px]"
               />
@@ -90,7 +92,10 @@ const HomeAbout = () => {
                 About <span className="text-[#100B68]">Shakeel </span>Dev
               </h1>
               <p className="py-3 text-black">
-               I redefine excellence in business solution at Shakeel Dev...
+                At <b>Shakeel Dev</b>, I craft tailored digital solutions with a
+                focus on performance, scalability, and user experience. My
+                mission is to help businesses transform their ideas into
+                reliable, future-ready software.
               </p>
               <div className="flex flex-col gap-3 mt-4">
                 {aboutFeatures.map((feature, index) => (
@@ -111,10 +116,17 @@ const HomeAbout = () => {
           {isAboutPage && (
             <div className="w-full sm:w-6/12 flex flex-col justify-center px-4 gap-3">
               <h1 className="text-start font-bold text-4xl w-full sm:w-6/12 md:w-full">
-                Building <span className="text-[#100B68]">Future-Ready Software</span>
+                Building{" "}
+                <span className="text-[#100B68]">Future-Ready Software</span>
               </h1>
               <p className="w-full sm:w-9/12">
-                I am a passionate developers, designers, and thinkers building scalable solutions for tomorrow. At [Sh], we don’t just build software — we craft scalable, intelligent solutions that drive real-world impact. Our team of developers, designers, and strategists work together to deliver innovative digital products tailored for tomorrow’s challenges. Rooted in collaboration, quality, and forward thinking, we’re committed to helping businesses grow through technology.
+                I am a dedicated <b>Full Stack Web Developer</b> with expertise
+                in MERN, Next.js, and scalable cloud deployment. At{" "}
+                <b>Shakeel Dev</b>, I don’t just build websites I create
+                complete digital solutions that empower businesses to innovate,
+                grow, and succeed. Rooted in collaboration and problem-solving,
+                I deliver technology that is modern, secure, and aligned with
+                tomorrow’s challenges.
               </p>
             </div>
           )}

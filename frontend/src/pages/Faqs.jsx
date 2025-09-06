@@ -5,41 +5,42 @@ import "aos/dist/aos.css";
 
 const faqsData = [
   {
-    question: "What services do you offer?",
+    question: "What kind of projects do you work on?",
     answer:
-      "We offer web development, data science solutions, WordPress customization, and UI/UX design tailored to client needs.",
+      "I specialize in full stack web development using the MERN stack, Next.js, and modern frameworks to build scalable apps.",
     aos: "fade-right",
     duration: "1000",
   },
   {
-    question: "How long does a project usually take?",
+    question: "How long does it take you to complete a project?",
     answer:
-      "Project timelines vary but typically range from 2 to 6 weeks depending on complexity and requirements.",
+      "It depends on the scope, but most projects range from 2 to 6 weeks. I always keep clients updated on progress.",
     aos: "fade-right",
     duration: "2000",
   },
   {
-    question: "Do you offer post-launch support?",
+    question: "Do you provide support after project delivery?",
     answer:
-      "Yes, we provide maintenance, updates, and technical support after your project goes live.",
+      "Yes, I provide post-launch support, updates, and help with deployment to ensure everything runs smoothly.",
     aos: "fade-right",
     duration: "3000",
   },
   {
-    question: "Can I get a custom design for my brand?",
+    question: "Can you build a custom design for my website?",
     answer:
-      "Absolutely. We create custom designs that align with your brand identity and audience.",
+      "Absolutely. I create clean, user-friendly, and brand-focused UI/UX designs tailored to your goals and audience.",
     aos: "fade-right",
     duration: "3000",
   },
   {
-    question: "How do I get started with a project?",
+    question: "How do I start working with you?",
     answer:
-      "Simply contact us through the form or email. We’ll schedule a free consultation to understand your goals.",
+      "Just reach out through the contact form or email. I’ll schedule a free consultation to discuss your project idea.",
     aos: "fade-right",
     duration: "4000",
   },
 ];
+
 
 const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);

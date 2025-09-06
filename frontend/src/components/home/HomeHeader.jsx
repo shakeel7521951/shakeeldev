@@ -9,24 +9,25 @@ const slides = [
     title: "Welcome to",
     highlight: "Shakeel Dev",
     description:
-      "I craft smart, user-friendly digital solutions that help businesses innovate and grow.",
+      "I am a Full Stack Web Developer crafting scalable, user-friendly solutions with MERN, Next.js, and modern technologies.",
     image: "/home/header1.png",
   },
   {
-    title: "Transform Ideas Into",
+    title: "Turning Ideas Into",
     highlight: "Digital Reality",
     description:
-      "My creative design and clean code to deliver impactful digital experiences.",
+      "From clean UI to powerful backend, I build complete end-to-end solutions tailored to your business needs.",
     image: "/home/header1.png",
   },
   {
     title: "Your Vision,",
     highlight: "My Expertise",
     description:
-      "Partner with me to build scalable, modern websites that bring your vision to life.",
+      "I design, develop, and deploy impactful websites and applications that bring your vision to life seamlessly.",
     image: "/home/header1.png",
   },
 ];
+
 
 const HomeHeader = () => {
   return (

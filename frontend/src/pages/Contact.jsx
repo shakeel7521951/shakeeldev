@@ -31,7 +31,7 @@ const Contact = () => {
             },
             {
               img: "/home/contactIcon3.png",
-              title: "Reach Us Anytime",
+              title: "Reach Me Anytime",
               desc: "Provide multiple contact channels, ensuring clients can connect with you at their convenience.",
               aos: "fade-right",
               duration: 3000,
