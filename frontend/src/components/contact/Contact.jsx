@@ -35,41 +35,32 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: <FaPhoneAlt className="w-5 h-5 text-white" />,
-      text: "+44 7470 103120",
+      text: "+92 326 7100227",
     },
     {
       icon: <FaEnvelope className="w-5 h-5 text-white" />,
-      text: "info@codesthinker.com",
+      text: "shakeeldev.tech@gmail.com",
     },
     {
       icon: <MdLocationOn className="text-white text-base" />,
-      text: "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom(Regional Office)",
-    },
-    {
-      icon: <MdLocationOn className="text-white text-base" />,
-      text: "Hassan Manzil Basement Goheer Town Bahawalpur(Global Delivery Center)",
+      text: "Bahawalpur , Punjab , Pakistan",
     },
   ];
 
   const socialIcons = [
     {
       icon: <FaFacebookF />,
-      link: "https://www.facebook.com/profile.php?id=61565400934738",
-      color: "#ffffff",
-    },
-    {
-      icon: <FaTwitter />,
-      link: "", // You can remove this if not needed
+      link: "https://www.facebook.com/profile.php?id=61578954271887",
       color: "#ffffff",
     },
     {
       icon: <FaInstagram />,
-      link: "https://www.instagram.com/codesthinker_offical",
+      link: "https://www.instagram.com/shakeel.devv",
       color: "#ffffff",
     },
     {
       icon: <FaLinkedinIn />,
-      link: "https://www.linkedin.com/in/codes-thinker",
+      link: "https://www.linkedin.com/in/shakeel-dev",
       color: "#ffffff",
     },
   ];
