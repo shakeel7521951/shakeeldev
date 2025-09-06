@@ -31,7 +31,7 @@ const Features = () => {
   }, []);
 
   return (
-    <div className=" bg-gradient-to-br from-[#6998a1] to-[#c4e4eb] py-10 my-10 px-6 overflow-hidden">
+    <div className=" bg-gradient-to-br from-[#3D9CB3] to-[#c4e4eb] py-10 my-10 px-6 overflow-hidden">
       <h2
         className="text-center text-2xl sm:text-4xl font-bold mb-10 text-[#100B68]"
         data-aos="zoom-in"
@@ -50,7 +50,7 @@ const Features = () => {
             <div className="absolute top-3 right-3 w-4 h-4 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 animate-ping"></div>
 
             <div
-              className="w-20 h-20 mb-6 mx-auto flex items-center justify-center bg-gradient-to-tr from-[#a5a0dd] to-[#7b76df] rounded-full group-hover:scale-110 transition-transform duration-700 shadow-md"
+              className="w-20 h-20 mb-6 mx-auto flex items-center justify-center bg-gradient-to-tr from-[#3D9CB3] to-[#c4e4eb] rounded-full group-hover:scale-110 transition-transform duration-700 shadow-md"
               data-aos="zoom-out"
             >
               <img

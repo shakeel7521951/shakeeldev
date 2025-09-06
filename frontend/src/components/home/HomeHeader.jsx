@@ -57,7 +57,7 @@ const HomeHeader = () => {
                 <div className="text-white text-center max-w-4xl px-4 transform transition-all duration-500 hover:scale-[1.01]">
                   <h2 className="text-2xl md:text-5xl font-bold mb-6 leading-tight">
                     {slide.title}{" "}
-                    <span className="text-[#1E94AC]">
+                    <span className="text-[#119BA8]">
                       {slide.highlight}
                     </span>
                   </h2>

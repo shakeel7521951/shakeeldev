@@ -68,7 +68,7 @@ const HomeAbout = () => {
         }
       `}</style>
 
-      <div className="bg-[#e0ecee] pt-10 pb-10 px-5 text-black overflow-hidden">
+      <div className="bg-[#ADCCDE] pt-10 pb-10 px-5 text-black overflow-hidden">
         <div className="container mx-auto flex flex-col md:flex-row gap-8">
           {/* Image Section with Shine */}
           <div
