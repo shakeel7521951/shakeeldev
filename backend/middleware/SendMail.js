@@ -2,23 +2,21 @@ import dotenv from 'dotenv';
 dotenv.config();
 import nodemailer from 'nodemailer';
 
-// ✅ Setup transporter using Gmail SMTP with App Password
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: "bmxadventure8@gmail.com",        // ✅ Your Gmail address
-        pass: "yoie uzhf crai ccks"             // ✅ Gmail App Password (generated, not real password)
+        user: "shakeel7521951@gmail.com",
+        pass: "irfm pzgh kebw uvfg"
     },
     secure: true,
     timeout: 10000
 });
 
-// ✅ SendMail utility function
 const SendMail = async (email, subject, text) => {
     try {
         const mailOptions = {
-            from: 'bmxadventure8@gmail.com',     // ✅ Sender email
-            to: email,                           // ✅ Receiver email
+            from: 'shakeeldev.tech@gmail.com',
+            to: email,
             subject: subject,
             html: text
         };
