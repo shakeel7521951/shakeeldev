@@ -11,7 +11,7 @@ import { FaWhatsapp } from "react-icons/fa";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <div className="max-w-[1600px] mx-auto relative">
+      <div className="max-w-[2100px] mx-auto">
         <App />
 
         {/* WhatsApp Floating Button */}

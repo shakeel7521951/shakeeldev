@@ -50,7 +50,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-gradient-to-tr from-[#cbdbec] to-[#1E94AC] shadow-md py-2 fixed top-0 w-full z-40">
+    <nav className="w-[100%] max-w-[2100px] bg-gradient-to-tr from-[#cbdbec] to-[#1E94AC] shadow-md py-2 fixed top-0 z-40">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
