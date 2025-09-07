@@ -1,7 +1,63 @@
+import { useState } from "react";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Send email
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const templateParams = {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      message: formData.message,
+      subject: "Contact Form Submission",
+      time: new Date().toLocaleString(),
+    };
+
+    emailjs
+      .send(
+        "service_fhgifwk", // e.g., "service_123abc"
+        "template_q10vc8m", // e.g., "template_xyz456"
+        templateParams,
+        "Mj1CUVlx9qyRFY14l" // e.g., "Xyz123abcDEF"
+      )
+      .then(
+        () => {
+          toast("Message sent successfully! ✅");
+          setFormData({ name: "", phone: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("FAILED:", error);
+          toast.error("Failed to send message. Please try again later.");
+        }
+      )
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <div className="px-4 py-10 bg-gray-50 overflow-hidden">
       <div className="text-center mb-10">
@@ -60,21 +116,24 @@ const Contact = () => {
 
         {/* Right Section */}
         <div
-          className="md:w-2/3  p-6 rounded-lg shadow-lg"
+          className="md:w-2/3 p-6 rounded-lg shadow-lg"
           data-aos="fade-left"
           data-aos-duration="1000"
         >
           <h2 className="text-xl font-bold text-center text-black mb-6">
             CONTACT ME
           </h2>
-          <form className="flex flex-col gap-4">
+
+          <form onSubmit={sendEmail} className="flex flex-col gap-4">
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex items-center  border border-black text-black px-3 py-2 rounded w-full">
+              <div className="flex items-center border border-black text-black px-3 py-2 rounded w-full">
                 <FaUser className="me-2" />
                 <input
                   type="text"
                   name="name"
                   placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   className="w-full bg-transparent outline-none text-black placeholder-black"
                 />
@@ -85,39 +144,48 @@ const Contact = () => {
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
                   required
                   className="w-full bg-transparent outline-none text-black placeholder-black"
                 />
               </div>
             </div>
+
             <div className="flex items-center border border-black text-black px-3 py-2 rounded w-full">
               <MdEmail className="me-2" />
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
                 required
                 className="w-full bg-transparent outline-none text-black placeholder-black"
               />
             </div>
-            <div
-              className="flex  items-start  border
-             border-black text-black px-3 py-2 rounded w-full"
-            >
+
+            <div className="flex items-start border border-black text-black px-3 py-2 rounded w-full">
               <textarea
                 name="message"
                 placeholder="Message"
                 rows={4}
+                value={formData.message}
+                onChange={handleChange}
                 required
                 className="w-full bg-transparent outline-none text-black placeholder-black resize-none"
               />
             </div>
+
             <button
               type="submit"
-              className="text-white px-8 py-2 border border-[#f3f7f9] rounded-full text-lg font-semibold 
-                  shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 cursor-pointer w-fit ms-auto"
+              disabled={loading}
+              className="text-white px-8 py-2 rounded-full text-lg font-semibold shadow-lg
+    bg-[linear-gradient(to_right,#100B68,#3D9CB3,#28C2CF)] bg-[length:200%_100%] bg-left
+    hover:bg-right transition-all duration-700 cursor-pointer w-fit ms-auto
+    border border-[#c4e4eb] disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Send
+              {loading ? "Sending..." : "Send"}
             </button>
           </form>
         </div>

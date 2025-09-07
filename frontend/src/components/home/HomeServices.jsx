@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
- const HomeServices = () => {
+const HomeServices = () => {
   const services = [
     {
       name: "Full Stack Development",
@@ -81,7 +81,6 @@ import "aos/dist/aos.css";
     });
   }, []);
 
-  // Refresh AOS on service change
   useEffect(() => {
     AOS.refresh();
   }, [selectedService]);
@@ -91,17 +90,19 @@ import "aos/dist/aos.css";
   };
 
   return (
-    <div className="bg-white py-10 overflow-hidden">
+    <div className="bg-gradient-to-br from-[#c4e4eb] to-[#ffffff] py-10 overflow-hidden">
+      {/* Heading */}
       <h1
-        className="text-3xl lg:text-5xl px-5 font-extrabold leading-tight text-start md:text-center text-black"
+        className="text-3xl lg:text-5xl px-5 font-extrabold leading-tight text-start md:text-center"
         data-aos="fade-down"
       >
-        <span className="text-transparent bg-clip-text bg-[#100B68]">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#100B68] via-[#3D9CB3] to-[#28C2CF]">
           Services
         </span>{" "}
-        Availabe
+        Available
       </h1>
-      <p className="text-start md:text-center flex mx-auto px-5 md:w-[50rem]">
+
+      <p className="text-start md:text-center flex mx-auto px-5 md:w-[50rem] text-gray-700">
         Shakeel Dev offers crypto solutions, targeted marketing, impactful
         design, custom development, and professional video editing to elevate
         your brand.
@@ -117,12 +118,12 @@ import "aos/dist/aos.css";
             <h4
               key={index}
               className={`text-center px-10 py-2 rounded-3xl border border-[#0000001d] shadow cursor-pointer font-semibold text-xl
-    bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700
-    ${
-      service.name === selectedService.name
-        ? "text-white bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)]"
-        : "text-black hover:text-white hover:bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)]"
-    }`}
+              bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700
+              ${
+                service.name === selectedService.name
+                  ? "text-white bg-gradient-to-r from-[#100B68] via-[#3D9CB3] to-[#28C2CF]"
+                  : "text-[#100B68] hover:text-white hover:bg-gradient-to-r hover:from-[#28C2CF] hover:to-[#100B68]"
+              }`}
               onClick={() => handleServiceClick(service)}
             >
               {service.name}
@@ -136,7 +137,7 @@ import "aos/dist/aos.css";
           data-aos="zoom-in-left"
         >
           <img
-            key={selectedService.name} // ← forces re-render
+            key={selectedService.name}
             src="./home/servicesImage.png"
             alt="Services section"
             loading="lazy"
@@ -148,7 +149,7 @@ import "aos/dist/aos.css";
               {selectedService.tags.map((tag, index) => (
                 <h4
                   key={index}
-                  className="text-black w-fit px-3 py-2 rounded-xl font-semibold"
+                  className="text-[#100B68] bg-[#c4e4eb] hover:bg-[#28C2CF] hover:text-white transition-colors px-3 py-2 rounded-xl font-semibold"
                 >
                   {tag}
                 </h4>

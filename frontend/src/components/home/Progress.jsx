@@ -42,13 +42,16 @@ const Progress = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 text-center py-16 px-4 overflow-hidden">
+    <div className="bg-gradient-to-br from-[#c4e4eb] to-white text-center py-16 px-4 overflow-hidden">
       {/* Heading */}
       <h1
         data-aos="fade-left"
         className="text-3xl md:text-5xl font-bold mb-6"
       >
-        My <span className="text-[#100B68]">Progress</span>
+        My{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#100B68] via-[#3D9CB3] to-[#28C2CF]">
+          Progress
+        </span>
       </h1>
 
       {/* Subtext */}
@@ -68,10 +71,10 @@ const Progress = () => {
             data-aos={item.aos}
             data-aos-delay={index * 300} // stagger effect
             className="group w-52 h-44 flex flex-col justify-center items-center 
-              bg-[linear-gradient(45deg,#060043,#4764D6)] 
-              border-2 border-white rounded-2xl text-white shadow-md 
+              bg-gradient-to-br from-[#100B68] via-[#3D9CB3] to-[#28C2CF]
+              border-2 border-white rounded-2xl text-white shadow-lg 
               transform transition-transform duration-300 delay-0 
-              group-hover:delay-300 hover:scale-105"
+              group-hover:delay-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(40,194,207,0.7)]"
           >
             <h1 className="text-3xl md:text-4xl font-bold">
               {item.prefix || ""}

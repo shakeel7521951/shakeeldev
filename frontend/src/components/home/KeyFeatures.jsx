@@ -10,7 +10,7 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 
-// Feature data with AOS type and duration
+// Feature data
 const features = [
   {
     icon: <FaCode />,
@@ -65,16 +65,16 @@ const KeyFeatures = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 text-white px-5 py-2 sm:py-16 overflow-hidden">
-      <div className="flex flex-col w-full mx-auto sm:w-7/12 lg:flex-row items-center justify-center md:gap-16 lg:gap-32">
+    <div className="bg-[#c4e4eb] text-white px-5 py-12 sm:py-16 overflow-hidden">
+      <div className="flex flex-col w-full mx-auto sm:w-8/12 lg:flex-row items-center justify-center md:gap-16 lg:gap-32">
         {/* Circle Title */}
         <div
           className="flex items-center justify-center mb-10 lg:mb-0"
           data-aos="fade-right"
           data-aos-duration="3000"
         >
-          <div className="w-60 border border-[#251d23] transition-all ease-in delay-250 hover:bg-gradient-to-br from-[#0F00AA] to-[#060044] h-60 md:w-72 md:h-72 rounded-full flex items-center justify-center group shadow-2xl">
-            <h1 className="text-2xl text-black md:text-3xl group-hover:text-white font-bold text-center leading-tight tracking-wide">
+          <div className="w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-[#100b6883] shadow-2xl flex items-center justify-center transition-all ease-in delay-250 hover:bg-gradient-to-br from-[#100B68] to-[#3D9CB3] group">
+            <h1 className="text-2xl md:text-3xl font-bold text-center leading-tight tracking-wide text-[#100B68] group-hover:text-white">
               KEY
               <br />
               FEATURES
@@ -89,14 +89,18 @@ const KeyFeatures = () => {
               key={index}
               data-aos={feature.aos}
               data-aos-duration={feature.duration}
-              className={`flex h-13 justify-center items-center gap-4 px-4 w-full sm:w-[340px] md:w-[340px] rounded-full border border-[#251d23] shadow-md shadow-black group cursor-pointer relative delay-100 hover:shadow-lg transition-all duration-700 bg-[length:200%_100%] bg-left hover:bg-right hover:text-white
-              ${feature.position}
-              bg-white hover:bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)]`}
+              className={`relative flex items-center gap-4 px-4 h-14 w-full sm:w-[340px] md:w-[340px] rounded-full border-2 border-[#100B68] shadow-md cursor-pointer group transition-all duration-700 delay-100
+              bg-white bg-[length:200%_100%] bg-left hover:bg-right 
+              hover:bg-[linear-gradient(to_right,#100B68,#3D9CB3,#28C2CF)] hover:text-white
+              ${feature.position}`}
             >
-              <div className="h-[100%] absolute left-0 border-r-2 border-0 top-0 w-[15%] flex items-center justify-center rounded-full transition-all border-black delay-250 ease-in-out group-hover:border-white group-hover:bg-black group-hover:text-white text-black text-xl shadow-md">
+              {/* Icon Section */}
+              <div className="absolute left-0 top-0 h-full w-[15%] flex items-center justify-center border-r-2 border-[#100B68] rounded-full text-[#100B68] text-xl shadow-md transition-all delay-250 ease-in-out group-hover:border-white group-hover:bg-[#100B68] group-hover:text-white">
                 {feature.icon}
               </div>
-              <span className="text-black transition-all delay-250 ease-in-out group-hover:text-white font-semibold text-base tracking-wide">
+
+              {/* Label */}
+              <span className="ml-[20%] text-[#100B68] font-semibold text-base tracking-wide transition-all delay-250 ease-in-out group-hover:text-white">
                 {feature.label}
               </span>
             </div>

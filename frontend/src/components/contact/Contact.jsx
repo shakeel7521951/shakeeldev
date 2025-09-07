@@ -1,11 +1,9 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   FaPhoneAlt,
   FaEnvelope,
-  FaMapMarkerAlt,
-  FaTwitter,
   FaFacebookF,
-  FaYoutube,
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
@@ -20,16 +18,45 @@ export default function ContactSection() {
     message: "",
   });
 
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState(null);
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Optionally reset form
-    // setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSending(true);
+    setError(null);
+    setIsSent(false);
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
+
+    try {
+      const result = await emailjs.send(
+        "service_fhgifwk",     // 🔁 Replace with your actual service ID
+        "template_q10vc8m",    // 🔁 Replace with your actual template ID
+        templateParams,
+        "Mj1CUVlx9qyRFY14l"      // 🔁 Replace with your actual public key
+      );
+      console.log("Email sent successfully:", result.text);
+      setIsSent(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      console.error("Email sending failed:", err);
+      setError("Failed to send message. Please try again later.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const contactInfo = [
@@ -51,17 +78,14 @@ export default function ContactSection() {
     {
       icon: <FaFacebookF />,
       link: "https://www.facebook.com/profile.php?id=61578954271887",
-      color: "#ffffff",
     },
     {
       icon: <FaInstagram />,
       link: "https://www.instagram.com/shakeel.devv",
-      color: "#ffffff",
     },
     {
       icon: <FaLinkedinIn />,
       link: "https://www.linkedin.com/in/shakeel-dev",
-      color: "#ffffff",
     },
   ];
 
@@ -70,11 +94,12 @@ export default function ContactSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-7xl font-bold mb-4">
-            Get In <span className="  text-[#0F00AA]">Touch</span>
+            Get In <span className="text-[#0F00AA]">Touch</span>
           </h1>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 md:mt-20">
+          {/* Left Side */}
           <div className="space-y-8">
             <h1 className="text-2xl sm:text-4xl mb-6 font-bold">
               Ready To Turn Your Vision Into Reality?
@@ -106,6 +131,7 @@ export default function ContactSection() {
                   key={idx}
                   href={item.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-[#c508ff] to-[#18c9ff] p-[2px] transition-transform duration-300 hover:scale-110"
                 >
                   <div className="w-full h-full flex items-center justify-center bg-[#060145] rounded-full group-hover:bg-white transition-colors duration-300">
@@ -118,10 +144,10 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Right Side - Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className=" p-6 rounded-4xl shadow-[linear-gradient(45deg,#060145,#BE10FF)]"
+            className="p-6 rounded-4xl shadow-[linear-gradient(45deg,#060145,#BE10FF)]"
           >
             <h2 className="text-2xl text-center font-bold mb-6">
               Book a Free Consultation
@@ -168,7 +194,7 @@ export default function ContactSection() {
                   value={formData.subject}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-black"
-                  placeholder="Enter your Subject "
+                  placeholder="Enter your Subject"
                 />
               </div>
 
@@ -188,11 +214,25 @@ export default function ContactSection() {
 
               <button
                 type="submit"
-                className="px-6 py-3 text-white  border border-[#f3f7f9] rounded-full text-lg font-semibold 
-                shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 flex items-center gap-3 cursor-pointer"
+                disabled={isSending}
+                className="px-6 py-3 text-white border border-[#f3f7f9] rounded-full text-lg font-semibold shadow-lg 
+                bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right 
+                transition-all duration-700 flex items-center gap-3 cursor-pointer disabled:opacity-50"
               >
-                SUBMIT <IoSendSharp className="w-5 h-5" />
+                {isSending ? "Sending..." : "SUBMIT"} <IoSendSharp className="w-5 h-5" />
               </button>
+
+              {/* Feedback Messages */}
+              {isSent && (
+                <p className="text-green-600 font-semibold mt-4">
+                  ✅ Message sent successfully!
+                </p>
+              )}
+              {error && (
+                <p className="text-red-600 font-semibold mt-4">
+                  ❌ {error}
+                </p>
+              )}
             </div>
           </form>
         </div>
