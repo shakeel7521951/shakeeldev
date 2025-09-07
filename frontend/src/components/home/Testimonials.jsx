@@ -24,10 +24,10 @@ const Testimonials = () => {
     const hasHalfStar = rating % 1 >= 0.5;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<FaStar key={`full-${i}`} className="text-yellow-400" />);
+      stars.push(<FaStar key={`full-${i}`} className="text-[#28C2CF]" />);
     }
     if (hasHalfStar) {
-      stars.push(<FaStarHalfAlt key="half" className="text-yellow-400" />);
+      stars.push(<FaStarHalfAlt key="half" className="text-[#28C2CF]" />);
     }
 
     const emptyStars = 5 - stars.length;
@@ -70,14 +70,14 @@ const Testimonials = () => {
       />
 
       {(aboutTestimonials || homeTestimonials) && (
-        <div className="w-full max-w-5xl mx-auto bg-[linear-gradient(45deg,#0F00AA,#060044)] p-8 md:p-10 rounded-xl flex flex-col md:flex-row gap-8 items-center">
+        <div className="w-full max-w-5xl mx-auto bg-[linear-gradient(45deg,#100B68,#3D9CB3,#28C2CF)] p-8 md:p-10 rounded-xl flex flex-col md:flex-row gap-8 items-center">
           {/* Heading */}
           <div
             className="w-full md:w-1/3 text-center md:text-left"
             data-aos="fade-down"
           >
             <h1 className="text-3xl font-bold text-white leading-snug">
-              Our <span className="text-[#FFF200]">Clients,</span> In Their Own
+              Our <span className="text-[#c4e4eb]">Clients,</span> In Their Own
               Words
             </h1>
           </div>
@@ -153,7 +153,7 @@ const Testimonials = () => {
               <button
                 data-aos="zoom-out"
                 onClick={handleAddReview}
-                className="px-2 py-2 text-xs sm:px-3 sm:py-2 cursor-pointer text-black hover:text-white sm:text-lg font-semibold rounded text-md shadow-lg bg-[linear-gradient(to_right,#FFF200,#e1c700,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 hover:scale-105"
+                className="px-2 py-2 text-xs sm:px-3 sm:py-2 cursor-pointer text-black hover:text-white sm:text-lg font-semibold rounded text-md shadow-lg bg-[linear-gradient(to_right,#3D9CB3,#28C2CF,#100B68)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 hover:scale-105"
                 title="Click to add your review"
               >
                 Add your reviews

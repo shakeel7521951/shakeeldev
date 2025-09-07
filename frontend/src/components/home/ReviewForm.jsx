@@ -24,7 +24,7 @@ export default function ReviewForm({ className, setFormReview }) {
       toast.success("Review Submitted Successfully", { position: "top-center" });
       setFormReview(false);
     } catch (err) {
-      console.error("Review submission failed:", err);
+      toast.error(err?.data?.message);
     }
   };
 
