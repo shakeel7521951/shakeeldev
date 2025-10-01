@@ -1,8 +1,3 @@
-// import novieta1 from "../../../public/project/novieta1.png";
-// import novieta2 from "../../../public/project/novieta2.png";
-// import novieta3 from "../../../public/project/novieta3.png";
-// import novieta4 from "../../../public/project/novieta4.png";
-
 export const allProjects = [
   {
     id: 13,
@@ -17,6 +12,22 @@ export const allProjects = [
       "/project/lundary4.PNG",
     ],
     link: "https://lundary.vercel.app",
+    aos: "fade-right",
+    duration: "1000",
+    category: "Website development",
+  },
+  {
+    id: 19,
+    title: "Empower Zone – Hassle-Free Benefits Assistance in New York",
+    description: "Empower Zone helps New York families navigate government benefit programs with ease, providing personalized support, application handling, denial appeals, and end-to-end guidance to secure maximum benefits.",
+    featured: "/project/empower.png",
+    thumbnails: [
+      "/project/empower1.png",
+      "/project/empower2.png",
+      "/project/empower3.png",
+      "/project/empower4.png",
+    ],
+    link: "https://empowerzone.us",
     aos: "fade-right",
     duration: "1000",
     category: "Website development",
@@ -97,6 +108,22 @@ export const allProjects = [
       "/project/gcc4.png",
     ],
     link: "https://business-startup-six.vercel.app/",
+    aos: "fade-right",
+    duration: "1000",
+    category: "Website development",
+  },
+  {
+    id: 20,
+    title: "Online Quran Academy – Learn Quran Anytime, Anywhere",
+    description: "Online Quran Academy offers interactive one-on-one Quran classes with certified teachers, flexible schedules, and courses in Tajweed, Hifz, Tafseer, and Arabic, enabling students worldwide to learn from home.",
+    featured: "/project/onlineQuran.png",
+    thumbnails: [
+      "/project/onlineQuran1.png",
+      "/project/onlineQuran2.png",
+      "/project/onlineQuran3.png",
+      "/project/onlineQuran4.png",
+    ],
+    link: "https://online-quran-rho.vercel.app",
     aos: "fade-right",
     duration: "1000",
     category: "Website development",
