@@ -164,7 +164,7 @@ export const allProjects = [
       "/project/bmx3.png",
       "/project/bmx4.png",
     ],
-    link: "https://www.bmxadventure.com/",
+    link: "https://bmx-frontend.vercel.app",
     aos: "fade-right",
     duration: "1000",
     category: "Website development",
